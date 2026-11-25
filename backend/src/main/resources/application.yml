@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/manga}
+    username: ${SPRING_DATASOURCE_USERNAME:manga}
+    password: ${SPRING_DATASOURCE_PASSWORD:manga}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  management:
+    ednpoints:
+      web:
+        exposure:
+          include: health
