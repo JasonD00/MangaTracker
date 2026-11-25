@@ -47,12 +47,12 @@ jobs: # build and test job
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-        # java maven 17 and restore dependencies
-      - name: Set up Java 17
+        # java maven 21 and restore dependencies
+      - name: Set up Java 21
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "21"
           cache: maven
         # build the project, set variables
       - name: Build and test
